@@ -113,7 +113,6 @@ public class WildcardHostnameVerifier implements HostnameVerifier {
             	// Parse the attribute pair
                 String type = parseAttributeType();
                 String value = parseAttributeValue();
-                System.out.println(type+"="+value);
                 
                 // If we find the common name, return it.
                 if (type.toUpperCase().equals("CN") || type.equals("2.5.4.3"))
