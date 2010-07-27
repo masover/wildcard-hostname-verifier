@@ -11,7 +11,6 @@
 	</target>
 	
 	<target name="jar" depends="compile">
-		<delete file="forkbox-wildcard.jar"/>
 		<jar destfile="forkbox-wildcard.jar"
 			compress="true"
 			basedir="bin"
