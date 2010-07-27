@@ -16,7 +16,9 @@ import javax.net.ssl.SSLPeerUnverifiedException;
 import javax.net.ssl.SSLSession;
 import javax.security.auth.x500.X500Principal;
 
-public class WildcardHostnameVerifier implements weblogic.security.SSL.HostnameVerifier {
+import weblogic.security.SSL.HostnameVerifier;
+
+public class WildcardHostnameVerifier implements HostnameVerifier {
     public WildcardHostnameVerifier() {
         super();
     }
@@ -25,7 +27,7 @@ public class WildcardHostnameVerifier implements weblogic.security.SSL.HostnameV
      * Parses the Distinguished Name, specifically looking for Common Names.
      * Attempts to adhere relatively strictly to RFC2253.
      */
-    public static class DistinguishedNameParser {
+    private static class DistinguishedNameParser {
         private CharacterIterator iter;
         private String string;
         private DistinguishedNameParser(String name) {
