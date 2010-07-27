@@ -1,0 +1,3 @@
+Copy or symlink weblogic.jar from <MIDDLEWARE_HOME>/wlserver_10.3/server/lib/weblogic.jar to this directory.
+
+Note that by default, the middleware home is named Oracle/Middleware in your home directory -- so, on unix, the full path would be /home/yourname/Oracle/Middleware/wlserver_10.3/server/lib/weblogic.jar.

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="project" default="default">
+    <description>
+            Builds a jar.
+    </description>
+
+    <target name="default" description="Compiles and builds the jar." depends="jar"/>
+	
+	<target name="compile">
+		<javac srcdir="src" destdir="bin"/>
+	</target>
+	
+	<target name="jar" depends="compile">
+		<delete file="forkbox-wildcard.jar"/>
+		<jar destfile="forkbox-wildcard.jar"
+			compress="true"
+			basedir="bin"
+			level="9"/>
+	</target>
+
+</project>
