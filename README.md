@@ -12,6 +12,11 @@ I had the same need as [this guy](http://jandrewthompson.blogspot.com/2010/04/we
 
 Watch out when you patch WebLogic, though. I have no idea how it interacts with actual WebLogic patches.
 
+For an actual production deployment, from [this blog post](http://blogs.oracle.com/jamesbayer/2010/01/weblogic_nodemanager_quick_sta.html):
+
+> * Now go back to the web console - http://localhost:7001, for each server in the environment, go to the server start tab and put in the appropriate values.
+> * If you are using StartScriptEnabled=true in nodemanager.properties, then the classpath and jvm arguments from the script will be used first and the values you specify on the Server Startup tab will get added to the end, so you only need to enter values that are unique to each server in the classpath and arguments section.
+
 ## Deployment
 
 [Download the jar][download], and install it somewhere in your server's classpath. Then follow Oracle's directions on [configuring a custom hostname verifier](http://download.oracle.com/docs/cd/E12840_01/wls/docs103/ConsoleHelp/taskhelp/security/ConfigureACustomHostNameVerifier.html). Set the Custom Hostname Verifier to:
